@@ -1,8 +1,8 @@
-package org.architecture.cnl.ide;
+package org.architecture.cnl;
 
 import java.util.List;
 
-import org.architecture.cnl.ArchCnlStandaloneSetup;
+import org.architecture.cnl.ArchcnlStandaloneSetup;
 import org.eclipse.emf.common.util.URI;
 import org.eclipse.emf.ecore.resource.Resource;
 import org.eclipse.xtext.generator.GeneratorDelegate;
@@ -21,12 +21,8 @@ public class CNL2OWLGenerator {
 	public void transformCNLFile(String path) {
 
 		System.out.println("path: "+path);
-		
-<<<<<<< HEAD
+
 		ArchcnlStandaloneSetup setup = new ArchcnlStandaloneSetup();
-=======
-		ArchCnlStandaloneSetup setup = new ArchCnlStandaloneSetup();
->>>>>>> 4a902a153bc7b8aac137e685b16e155254263f72
 
 		Injector injector = setup.createInjectorAndDoEMFRegistration();
 
