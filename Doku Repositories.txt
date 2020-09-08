@@ -180,6 +180,40 @@ nur Read.me
 
 
 
+Aufrufe zwischen den Repositories:
+==================================
+CNLToolchain parser.parseRulesFromDocumentation()
+--> 
+
+asciidocparser / AsciiDocArc42Parser 
+--> 
+
+org.architecture.cnl / CNL2OWLGenerator.transformCNLFile 
+--> 
+			ArchcnlStandaloneSetup setup = new ArchcnlStandaloneSetup();
+
+			Injector injector = setup.createInjectorAndDoEMFRegistration();
+	
+	
+			GeneratorDelegate generator = injector.getInstance(GeneratorDelegate.class);
+			generator.doGenerate()
+			
+			=
+			
+			ArchcnlGenerator extends AbstractGenerator
+			ArchcnlGenerator.doGenerate()
+
+--> (jena-api) api = APIFactory.get()
+		api.createOntology("./architecture"+id+".owl", namespace)
+	
+		und z.B.
+	
+		api.getOWLObjectProperty
+
+		--> stanford-corenlp...lemmatizeProperty ()
+		
+=> stanford-corenlp Probleme bei 3.9.1 => Upgrade auf 3.9.2 => maven clean => 
+
 
 
 
